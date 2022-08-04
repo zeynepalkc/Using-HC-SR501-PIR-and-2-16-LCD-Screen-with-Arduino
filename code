@@ -1,0 +1,48 @@
+#include <LiquidCrystal.h>
+LiquidCrystal lcd(12,11,5,4,3,2); 
+int pirsensor = 8; 
+int state = LOW;
+int val = 0;
+void setup()
+{
+Serial.begin(9600); 
+lcd.begin(16,2);
+pinMode(pirsensor, INPUT); 
+lcd.clear();
+lcd.setCursor(0,0); 
+lcd.print("Robolink");
+lcd.setCursor(7,1); 
+lcd.print("Teknoloji");
+delay(1000); 
+}
+void loop()
+{ 
+val = digitalRead(pirsensor); 
+if (val == HIGH)
+{ 
+delay(100);
+if (state == LOW)
+{ 
+Serial.println("Hareket Algilandi");
+lcd.clear();
+lcd.setCursor(0,0); 
+lcd.print("Hareket");
+lcd.setCursor(0,1);
+lcd.print("Algilandi");
+state = HIGH;
+} 
+}
+else
+{
+if (state == HIGH)
+{
+Serial.println("Hareket Yok");
+lcd.clear(); 
+lcd.setCursor(0,0); 
+lcd.print("Hareket"); 
+lcd.setCursor(0,1); 
+lcd.print("Yok"); 
+state = LOW;
+}
+}
+}
