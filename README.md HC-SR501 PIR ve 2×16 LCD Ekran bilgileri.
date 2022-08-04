@@ -1,0 +1,15 @@
+# Using-HC-SR501-PIR-and-2-16-LCD-Screen-with-Arduino
+
+
+
+HC-SR501 PIR Sensörü Nedir?
+Bu sensör, etraftaki hareketleri algılamak için kullanılan bir modüldür. İçerisinde IR sensör vardır. Kullanacağımız uygulamaya göre üzerinde bulunan potansiyometreleri bir tornavida aracılığıyla ayarlayarak hassasiyetini ve ölçüm mesafesini ayarlayabiliriz. Dijital çıkış veren bir sensördür.
+
+
+
+Özellikler:
+Çalışma Voltajı: 5-12V
+Lojik Sinyal: 3.3V
+Algılama Mesafesi: 3-5 metre
+Çıkış Bekleme Süresi: 5-200 saniye
+Ürün Boyutları: 33x25x24 mm
